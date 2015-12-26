@@ -20,19 +20,21 @@ class Subjects
   #   SUBJECT_POINTS[self.name] > SUBJECT_POINTS[other.name]
   # end
 
-  def <=>(other)
-    if SUBJECT_POINTS[self.name] > SUBJECT_POINTS[other.name]
-      return 1
-    elsif SUBJECT_POINTS[self.name] < SUBJECT_POINTS[other.name]
-      return -1
-    else
-      return 0
-    end
-  end
 
   # overriding the spaceship operator
   # basically a compareTo method ala Java
-
+  def <=>(other)
+    # if SUBJECT_POINTS[self.name] > SUBJECT_POINTS[other.name]
+    #   return 1
+    # elsif SUBJECT_POINTS[self.name] < SUBJECT_POINTS[other.name]
+    #   return -1
+    # else
+    #   return 0
+    # end
+    # shorter way to do this :O WOW! just tell which
+    # things(quantities) to compare, and rubys comparable does it for you
+    SUBJECT_POINTS[self.name] <=> SUBJECT_POINTS[other.name]
+  end
 
 end
 
