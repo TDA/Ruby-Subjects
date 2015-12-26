@@ -33,6 +33,8 @@ class Subjects
     # end
     # shorter way to do this :O WOW! just tell which
     # things(quantities) to compare, and rubys comparable does it for you
+    # so as long as the quantities you want to compare are builtin ones,
+    # just call <=> straight instead of doing the if..elsif..else
     SUBJECT_POINTS[self.name] <=> SUBJECT_POINTS[other.name]
   end
 
@@ -46,3 +48,6 @@ puts sub1 <= sub2
 puts sub1 >= sub2
 puts sub1 > sub2
 puts sub1 < sub2
+
+
+puts 'cat'.between?('ant', 'dog')   #=> true
